@@ -22,8 +22,7 @@ const useFetch = (url) => {
         setError(null);
         setLevels(data.map(game => game.Level));
         console.log(levels)
-      })
-      .catch(err => {
+      })      .catch(err => {
         // auto catches network / connection error
         setIsPending(false);
         setError(err.message);
